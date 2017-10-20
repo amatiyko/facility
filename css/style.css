@@ -1,0 +1,145 @@
+:root {
+    --main-text-color: #646464;
+    --secondary-menulink-color: #545ad8;
+
+}
+
+body { padding-top: 60px; }
+
+.item img {
+    height: 650px;
+}
+.navigation {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+}
+.navbar {
+    background-color: white;
+}
+
+.logo-text {
+    color: var(--main-text-color);
+    font-size: 18px;
+}
+
+.menu ul {
+    display: inline-block;
+    width: 100%;
+    text-align: right; 
+    margin-bottom: 0;
+}
+.menu ul li {
+    display: inline-block;
+    margin-top:auto;
+    margin-left: 30px;
+}
+.menu ul li a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0;
+}
+.menu ul li a:hover {
+    color: var(--secondary-menulink-color);
+}
+
+#full-slider, #mini-slider, #columns {
+    margin-bottom: 40px;
+}
+#article {
+    margin-bottom: 160px;
+}
+
+
+.section {
+    color: var(--main-text-color);
+}
+
+.section h3 {
+    font-size: 18px;
+}
+
+.section p {
+    font-size: 14px;
+}
+
+.section#article h3, .section#article p {
+    font-size: 16px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-header h2 span {
+    position: relative;
+}
+.section-header h2 span:after {
+    content: '';
+    position: absolute;
+    border-top: 2px solid var(--main-text-color);
+    left: 40%;
+    bottom: -10%;
+    width: 20%;
+    transition: all 1s ease-in;
+}
+.section-header h2 span:hover:after {
+    animation: header-underline .5s ease-in-out forwards;
+}
+
+.mini-slider-image img {
+    width: 100%;
+}
+
+#full-slider .left-arrow, #full-slider .right-arrow {
+    background-color: white;
+}
+.left-arrow, .right-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto auto;
+
+}
+.left-arrow img, .right-arrow img {
+    height: 15px;
+}
+.left-arrow img {
+    transform: scale(-1, 1);
+}
+.left-arrow:hover, .right-arrow:hover {
+    background-color: var(--main-text-color);
+    border-color: var(--main-text-color);
+}
+.left-arrow:hover img, .right-arrow:hover img {
+    fill: white;
+}
+
+.carousel-control, .carousel-control.left, .carousel-control.right{
+    background: none;
+}
+.carousel-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes header-underline {
+    from {
+        left: 40%;
+        width: 20%;
+    }
+    to {
+        left: 30%;
+        width: 40%;
+    }
+}
