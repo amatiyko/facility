@@ -3,8 +3,10 @@ $(document).ready(function () {
   $(".menu-link").click(function () {
       var menuElement = $(this).attr("href");
       var destination  = $(menuElement).offset().top;
-	$('body,html,document').animate({scrollTop: destination - 70}, 1500);
-      return false;
+	$('body,html,document').animate({scrollTop: destination}, 1500, function(){
+      $('body,html,document').animate({scrollTop: destination - 70}, 1000);
+    });
+    return false;
   });
   $(window).scroll(function() {
     if($(window).scrollTop() > $('#full-slider').height() - 20) {

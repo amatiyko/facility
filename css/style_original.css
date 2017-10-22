@@ -8,7 +8,6 @@
 body { 
     padding-top: 60px; 
     font-family: GothamPro;
-    /*position: relative;*/
 }
 .popup {
     background-color: rgba(0,0,0,.5);
@@ -24,7 +23,7 @@ body {
 }
 .popup-message {
     background-color: white;
-    padding:100px;
+    padding: 100px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -63,9 +62,6 @@ body {
     outline: none;
     line-height: 50px;
 }
-/*.popup-message .pop-up-btn {
-    width: 70%;
-}*/
 
 .scrolled-nav {
     border-bottom: 5px solid var(--main-text-color);
@@ -76,7 +72,7 @@ body {
 #full-slider {
     position: relative;
     width: 100vw;
-    height: auto;
+    /*height: auto;*/
 }
 #cover {
     position: absolute;
@@ -84,10 +80,8 @@ body {
     top: 0;
     color: var(--secondary-text-color);
     height: 100%;
-/*    z-index: 2;
-*/}
+}
 .content {
-    border: 1px solid red;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -97,13 +91,14 @@ body {
 
 }
 .content h1, .content p, .content button {
-    display: block;
-    z-index: 3;
+/*    display: block;
+*/    z-index: 3;
     margin-bottom: 35px;
 }
 .content h1 {
     font-size: 75px;
     font-weight: bold;
+    text-align: center;
 }
 .content p {
     width: 30%;

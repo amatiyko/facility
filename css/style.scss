@@ -1,35 +1,222 @@
+// ==========  VARIABLES AND MIXINS   ==========
+// =============================================
 $main-text-color: #646464;
 $secondary-text-color: #ffffff;
 $secondary-menulink-color: #545ad8;
 
-body {
-	padding-top: 60px;
+@mixin flex {
+	display: flex;
+	align-items: center;
+    justify-content: center; 
 }
 
-.menu {
-	ul {
-		display: inline-block;
-		width: 100%;
-		text-align: right;
-		margin-bottom: 0;
+@mixin flex-column {
+	flex-wrap: wrap;
+    flex-direction: column;
+}
 
-		li {
-			display: inline-block;
-			margin-left: 30px;
+body {
+	padding-top: 60px;
+	ont-family: GothamPro;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover {
+    color: var(--secondary-menulink-color);
+}
+}
+
+// ============   POP UP STYLE   ===============
+// =============================================
+.popup {
+    background-color: rgba(0,0,0,.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    @include flex;
+
+    display: none;
+
+    .popup-message {
+    	background-color: white;
+	    padding: 100px;
+	    position: relative;
+
+	    @include flex;
+	    @include flex-column;
+
+	    p {
+	    	color: $main-text-color;
+	    	font-size: 18px;
+    		font-weight: bold;
+    		margin-bottom: 50px;
+	    }
+
+	    .corner-pop-up-btn {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    width: 40px;
+		    height: 40px;
+
+		    @include flex;
+
+		    span {
+		    	cursor: pointer;
+    			color: $main-text-color;
+		    }
+		}
+    }
+}
+
+.pop-up-btn {
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: $main-text-color;
+    color: $secondary-text-color;
+    font-size: 16px;
+    outline: none;
+    line-height: 50px;
+}
+
+// =============   NAVIGATION   ================
+// =============================================
+                   
+.navbar {
+	background-color: white;
+
+	.navigation {
+		padding-top: 10px;
+    	padding-bottom: 10px;
+    	height: 100%;
+    	display: flex; 
+    	align-items: center;
+
+    	.logo-text {
+    		color: $main-text-color;
+    		font-size: 18px;
+		}
+
+		.menu {
+			ul {
+				display: inline-block;
+				width: 100%;
+				text-align: right;
+				margin-bottom: 0;
+
+				li {
+					display: inline-block;
+					margin-left: 30px;
 			
-			a {
-				color: $main-text-color;
-				text-decoration: none;
-				font-size: 14px;
-				padding: 0;
+					a {
+						color: $main-text-color;
+						text-decoration: none;
+						font-size: 14px;
+						padding: 0;
 
-				&:hover {
-					color: $secondary-menulink-color;
+						&:hover {
+							color: $secondary-menulink-color;
+						}
+					}
 				}
 			}
 		}
 	}
 }
+
+.scrolled-nav {
+    border-bottom: 5px solid $main-text-color;
+    transition: .5s;
+}
+
+// =============   FULL SLIDER   ===============
+// =============================================
+
+#full-slider {
+	position: relative;
+	width: 100vw;
+
+	#cover {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: $secondary-text-color;
+		height: 100%;
+
+		.content {
+			height: 100%;
+
+			@include flex;
+			@include flex-column;
+		
+			h1, p, button {
+				z-index: 3;
+				margin-bottom: 35px;
+			}
+
+			h1 {
+				font-size: 75px;
+    			font-weight: bold;
+    			text-align: center;
+			}
+
+			p{
+				width: 30%;
+    			text-align: center;
+			}
+		}
+	}
+
+	.left-arrow, .right-arrow {
+		height: 50px;
+	    width: 50px;
+	    border: 2px solid $secondary-text-color;
+	    border-radius: 50%;
+	    transition: .3s;
+	    
+	    @include flex;
+
+	    svg path {
+	    	fill: $secondary-text-color;
+	    	width: 2px;
+	    }
+
+	    &:hover {
+    		transition: .3s;
+   			background-color: $secondary-text-color;
+
+   			svg path {
+   				transition: .3s;
+				fill: $main-text-color;	
+   			}
+		}
+	}
+
+	.left-arrow {
+		transform: scale(-1, 1);
+	}
+}
+
+.carousel-control, .carousel-control.left, .carousel-control.right,
+.carousel-control:hover,
+.carousel-control:focus {
+    background: none;
+    filter: none;
+    opacity: 1;
+}
+.carousel-control {
+    @include flex;
+}
+
+// ===============   SECTIONS  =================
+// =============================================
 
 .section {
 	color: $main-text-color;
@@ -68,21 +255,69 @@ body {
 	}
 }
 
-.left-arrow, .right-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin: auto auto;
-
-    &:hover {
-    	background-color: $main-text-color;
-    	border-color: $main-text-color;
-    }
+#full-slider, #mini-slider, #columns {
+    margin-bottom: 40px;
 }
+#article {
+    margin-bottom: 160px;
+}
+
+// =============   MINI SLIDER  ================
+// =============================================
+
+.mini-slider {
+    display: flex;
+
+    .btn-folder {
+    	@include flex;
+
+ 		.left-arrow, .right-arrow {
+	    	height: 50px;
+	    	width: 50px;
+	    	border: 1px solid black;
+	    	border-radius: 50%;
+	    	transition: .3s;
+
+	    	@include flex;
+
+	    	&:hover {
+	    		transition: .3s;
+	   			background-color: $main-text-color;
+	   			border-color: $main-text-color;
+
+	   			svg path {
+	   				transition: .3s;
+    				fill: $secondary-text-color;	
+	   			}
+	   		}
+		}
+
+		.left-arrow {
+    		transform: scale(-1, 1);
+		}
+	}
+
+	.owl-prev, .owl-next {
+    	display: none;
+	}
+}
+
+// ===============   ARTICLE  ==================
+// =============================================
+
+#article {
+	.article-container {
+		b {
+			color: black;
+		}
+		span {
+			text-decoration: underline;
+		}
+	}
+}
+
+// ==============   KEYFRAMES  =================
+// =============================================
 
 @keyframes header-underline {
     from {
