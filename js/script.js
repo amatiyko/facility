@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".menu-link").click(function () {
       var menuElement = $(this).attr("href");
       var destination  = $(menuElement).offset().top;
-	$('body,html,document').animate({ scrollTop: destination - 60}, 1500);
+	$('body,html,document').animate({scrollTop: destination - 70}, 1500);
       return false;
   });
   $(window).scroll(function() {
@@ -36,9 +36,11 @@ $(document).ready(function () {
 //================================================================================popup functions 
   $('#call-pop').click(function() {
     $('.popup').css("display", "flex").hide().fadeIn();
+    $("body").css("overflow","hidden"); 
   })
 
   $('.close-pop').click(function() {
+    $("body").css("overflow","auto"); 
     $('.popup').fadeOut();
   })
 });
