@@ -2,69 +2,97 @@
 <html lang = "en">
 <head>
   <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FACILITY TEST | Matiyko</title>
   <link rel = "stylesheet" href = "css/normalize.css">
+  <link rel = "stylesheet" href = "css/owl.carousel.css">
+  <link rel = "stylesheet" href = "css/owl.carousel.min.css">
   <link rel = "stylesheet" href = "css/bootstrap.css">
-  <link rel = "stylesheet" href = "css/style.css">
+  <link rel = "stylesheet" href = "css/style_original.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
 </head>
 <body>
 
-  <nav class="navbar navbar-fixed-top">
-  <div class="container">
-    <div class="row navigation">
-      <div class="col-md-1 col-sm-2 col-xs-12 logo-img">
-          <img src="img/logo.svg" alt="FACILITY TEST">
-      </div>
-      <div class="col-md-2 col-sm-2 col-xs-12 logo-text">FACILITY TEST</div>
-      <div class="col-md-9 menu nav">
-        <ul class="right">
-            <li><a class="menu-link" href ="#full-slider">FULL SLIDER</a></li>
-            <li><a class="menu-link" href ="#mini-slider">MINI SLIDER</a></li>
-            <li><a class="menu-link" href ="#columns">COLUMNS</a></li>
-            <li><a class="menu-link" href ="#article">ARTICLE</a></li>
-            <li><a class="menu-link" href ="#map">MAP</a></li>
-        </ul>
-    </div>
+  <div class="popup">
+    <div class="popup-message col-md-4">
+      <p>This is pop up</p>
+      <button class="pop-up-btn close-pop col-md-10">CLOSE</button>
+      <div class="corner-pop-up-btn close-pop"><span>X<span></div>
     </div>
   </div>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row navigation">
+        <div class="col-md-1 col-sm-2 col-xs-2 logo-img">
+            <img src="img/logo.svg" alt="FACILITY TEST">
+        </div>
+        <div class="col-md-2 col-sm-12 col-xs-12 logo-text">FACILITY TEST
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12 menu nav">
+          <ul class="right">
+              <li><a class="menu-link" href ="#full-slider">FULL SLIDER</a></li>
+              <li><a class="menu-link" href ="#mini-slider">MINI SLIDER</a></li>
+              <li><a class="menu-link" href ="#columns">COLUMNS</a></li>
+              <li><a class="menu-link" href ="#article">ARTICLE</a></li>
+              <li><a class="menu-link" href ="#map">MAP</a></li>
+          </ul>
+      </div>
+      </div>
+    </div>
   </nav>
-
   <div id="full-slider">
+    <div id="cover">
+      <div class=" content">
+        <h1>FULL SLIDER</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consectetur cumque dignissimos, dolorem doloremque dolores eaque incidunt itaque libero maiores, minima minus necessitatibus nesciunt nostrum pariatur, quidem vero vitae.
+        </p>
+        <button class="col-md-2 col-xs-4 pop-up-btn" id="call-pop">POP UP</button>
+      </div>
+    </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+      
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
 
-      <!-- Wrapper for slides -->
+      
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/slider.jpg"style="width:100%;">
+          <img src="img/slider.jpg">
         </div>
 
         <div class="item">
-          <img src="img/slider2.jpg" alt="Chicago" style="width:100%;">
+          <img src="img/slider2.jpg">
         </div>
 
         <div class="item">
-          <img src="img/slider3.jpg" alt="New york" style="width:100%;">
+          <img src="img/slider3.jpg">
         </div>
       </div>
 
-      <!-- Left and right controls -->
+      
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
         <div class="left-arrow">
-            <img src = "img/arrow.svg">
+            <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+              <g>
+                <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+              </g>
+            </svg>
         </div>
       </a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <div class="right-arrow">
-          <img src = "img/arrow.svg">
+            <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+              <g>
+                <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+              </g>
+            </svg>
         </div>
       </a>
     </div>
@@ -76,22 +104,28 @@
           <h2><span>MINI SLIDER</span></h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-1 btn-folder">
-            <div class="left-arrow">
-                <img src = "img/arrow.svg">
+    <div class="row mini-slider">
+        <div class="col-md-1 col-sm-1 btn-folder">
+            <div class="left-arrow" id="mini-left-arrow">
+                <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                  <g>
+                    <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+                  </g>
+                </svg>
             </div>
         </div>
-        <div class="col-md-10">
-          <div class="row">
-            <div class="mini-slider-image col-md-4"><img src = "img/slider.jpg" /></div>
-            <div class="mini-slider-image col-md-4"><img src = "img/slider2.jpg" /></div>
-            <div class="mini-slider-image col-md-4"><img src = "img/slider3.jpg" /></div>
-          </div>
+        <div class="col-md-10 col-sm-10 owl-carousel owl-theme">
+            <div class="mini-item" ><img src = "img/slider.jpg"  /></div>
+            <div class="mini-item" ><img src = "img/slider2.jpg" /></div>
+            <div class="mini-item" ><img src = "img/slider3.jpg" /></div>
         </div>
-        <div class="col-md-1">
-            <div class="right-arrow">
-                <img src = "img/arrow.svg">
+        <div class="col-md-1 col-sm-1 btn-folder">
+            <div class="right-arrow" id="mini-right-arrow" >
+                <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                  <g>
+                    <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+                  </g>
+                </svg>
             </div>
         </div>
     </div>
@@ -150,19 +184,16 @@
         </div>
     </div>
     <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="article-container col-md-8 col-md-offset-2">
             <h3>TITLE H3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore ea eaque explicabo natus nihil porro ullam.
-    Aliquid debitis deserunt dolore ducimus earum eligendi et ex exercitationem expedita facilis fugit illo laborum
-            nesciunt odio officia omnis perferendis possimus quod recusandae, repudiandae, sequi similique velit. Amet aspernatur dolorem esse, exercitationem explicabo, harum ipsum laborum laudantium minus modi nisi repellendus tempora voluptate? Ab placeat, reprehenderit! Ab aliquid aspernatur, consequatur deserunt distinctio doloribus eos, explicabo illo, molestiae mollitia natus nobis perspiciatis quaerat quo sint tempore ullam vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore ea eaque explicabo natus nihil porro ullam. <br/>Aliquid debitis deserunt dolore ducimus earum eligendi et ex exercitationem expedita facilis fugit illo laborum
+            nesciunt odio officia omnis perferendis possimus quod recusandae, repudiandae, sequi similique velit. <b>Amet aspernatur</b> dolorem esse, exercitationem explicabo, harum ipsum laborum laudantium minus modi nisi repellendus tempora voluptate? Ab placeat, reprehenderit! Ab aliquid aspernatur, consequatur deserunt distinctio doloribus eos, explicabo illo, <a>molestiae mollitia natus nobis</a> perspiciatis quaerat quo sint tempore ullam vitae.</p>
           </div>
     </div>
       <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="article-container col-md-8 col-md-offset-2">
             <h3>TITLE H3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore ea eaque explicabo natus nihil porro ullam.
-    Aliquid debitis deserunt dolore ducimus earum eligendi et ex exercitationem expedita facilis fugit illo laborum
-            nesciunt odio officia omnis perferendis possimus quod recusandae, repudiandae, sequi similique velit. Amet aspernatur dolorem esse, exercitationem explicabo, harum ipsum laborum laudantium minus modi nisi repellendus tempora voluptate? Ab placeat, reprehenderit! Ab aliquid aspernatur, consequatur deserunt distinctio doloribus eos, explicabo illo, molestiae mollitia natus nobis perspiciatis quaerat quo sint tempore ullam vitae.</p>
+            <p>Aliquam asperiores, <i>blanditiis earum ipsam maxime</i> nobis odio optio recusandae repellendus reprehenderit rerum saepe sapiente similique, totam voluptas! Autem dolores omnis quas sed! Aut beatae consequatur <span>dicta est illum incidunt</span> obcaecati officiis placeat, quidem, sapiente ullam voluptatum. Id, impedit nesciunt?<br/>Atque cum cumque, dolores ducimus ea et expedita id illo incidunt, iusto nam non nostrum omnis perspiciatis quisquam repellat reprehenderit saepe sequi sint tempore ullam velit.</p>
           </div>
     </div>
   </div>
