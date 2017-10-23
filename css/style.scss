@@ -376,6 +376,7 @@ button {
 	}
 	.tablet-popup.popup-message  {
 		display: flex;
+		width: 100vw;
 	}
 	.tablet-control {
 		.btn-folder {
@@ -420,6 +421,12 @@ button {
 	}
 	#full-slider {
 		height: 90vh;
+
+		img {
+			height: 90vh;
+			object-fit: cover;
+			overflow: hidden;
+		}
 		#cover {
 			.content {
 				h1 {

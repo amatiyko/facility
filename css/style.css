@@ -236,7 +236,8 @@ button {
     display: none; }
 
   .tablet-popup.popup-message {
-    display: flex; }
+    display: flex;
+    width: 100vw; }
 
   .tablet-control .btn-folder {
     display: flex; }
@@ -273,6 +274,10 @@ button {
 
   #full-slider {
     height: 90vh; }
+    #full-slider img {
+      height: 90vh;
+      object-fit: cover;
+      overflow: hidden; }
     #full-slider #cover .content h1 {
       font-size: 25px; }
     #full-slider #cover .content p {
