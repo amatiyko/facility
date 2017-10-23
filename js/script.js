@@ -68,13 +68,5 @@ $(document).ready(function () {
     });
     return false;
   });
-
-
-    $("#myCarousel").swiperight(function() {
-        $(this).carousel('prev');
-    });
-    $("#myCarousel").swipeleft(function() {
-        $(this).carousel('next');
-    });
 });
 
