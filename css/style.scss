@@ -11,7 +11,7 @@ $secondary-menulink-color: #545ad8;
 }
 
 @mixin flex-column {
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
     flex-direction: column;
 }
 
@@ -20,12 +20,15 @@ body {
 	ont-family: GothamPro;
 }
 
-a {
-    cursor: pointer;
-
-    &:hover {
-    color: var(--secondary-menulink-color);
-}
+//a {
+//    cursor: pointer;
+//
+//    &:hover {
+//    	color: var(--secondary-menulink-color);
+//	}
+//}
+button {
+	padding: 0;
 }
 
 // ============   POP UP STYLE   ===============
@@ -45,17 +48,29 @@ a {
 
     .popup-message {
     	background-color: white;
-	    padding: 100px;
+	    padding: 10px;
+	    height: 320px;
 	    position: relative;
 
 	    @include flex;
 	    @include flex-column;
 
+	    p, button, input {
+	    	margin-top: 15px;
+	    	margin-bottom: 15px;
+	    }
+
+	    input {
+	    	height: 40px;
+	    	border: 1px solid $main-text-color;
+	    	border-radius: 10px;
+	    	text-align: center;
+	    }
+
 	    p {
 	    	color: $main-text-color;
 	    	font-size: 18px;
     		font-weight: bold;
-    		margin-bottom: 50px;
 	    }
 
 	    .corner-pop-up-btn {
@@ -68,6 +83,8 @@ a {
 		    @include flex;
 
 		    span {
+		    	margin: 0;
+		    	padding: 0;
 		    	cursor: pointer;
     			color: $main-text-color;
 		    }
@@ -78,7 +95,7 @@ a {
 .pop-up-btn {
     height: 50px;
     border: 1px solid white;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: $main-text-color;
     color: $secondary-text-color;
     font-size: 16px;
@@ -91,42 +108,46 @@ a {
                    
 .navbar {
 	background-color: white;
+	height: 60px;
+	padding-top: 10px;
 
-	.navigation {
-		padding-top: 10px;
-    	padding-bottom: 10px;
-    	height: 100%;
-    	display: flex; 
-    	align-items: center;
-
-    	.logo-text {
-    		color: $main-text-color;
-    		font-size: 18px;
+	img {
+		height: 40px;
+	}
+	.navbar-header {
+		button {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.navbar-brand {
+			padding-top: 0;
 		}
 
-		.menu {
-			ul {
-				display: inline-block;
-				width: 100%;
-				text-align: right;
-				margin-bottom: 0;
+		a {
+			color: $main-text-color;
+			&:hover {
+				color: $main-text-color;
+			}
+		}
+	}
+	.menu {
+		ul {
+			float: right;
 
-				li {
-					display: inline-block;
-					margin-left: 30px;
-			
-					a {
-						color: $main-text-color;
-						text-decoration: none;
-						font-size: 14px;
-						padding: 0;
+			li{
+				a {
+					color: $main-text-color;
+					font-size: 14px;
 
-						&:hover {
-							color: $secondary-menulink-color;
-						}
+					&:hover {
+						background: transparent;
+						color: $secondary-menulink-color;
 					}
 				}
 			}
+
 		}
 	}
 }
@@ -142,6 +163,7 @@ a {
 #full-slider {
 	position: relative;
 	width: 100vw;
+	height: auto;
 
 	#cover {
 		position: absolute;
@@ -268,6 +290,18 @@ a {
 .mini-slider {
     display: flex;
 
+    .mini-item {
+    	// width: 100%;
+    	margin: 0;
+
+    	img {
+    		width: 100%;
+    	}
+    }
+
+    .tablet-control {
+    		padding-top: 50px;
+    }
     .btn-folder {
     	@include flex;
 
@@ -316,7 +350,7 @@ a {
 	}
 }
 
-// ==============   KEYFRAMES  =================
+// ==========  MEDIA AND KEYFRAMES  ============
 // =============================================
 
 @keyframes header-underline {
@@ -329,3 +363,143 @@ a {
         width: 40%;
     }
 }
+
+
+@media (max-width: 768px) {
+	.desktop-popup.popup-message  {
+		display: none;
+	}
+	.desktop-control {
+		.btn-folder {
+			display: none;
+		}
+	}
+	.tablet-popup.popup-message  {
+		display: flex;
+	}
+	.tablet-control {
+		.btn-folder {
+			display: flex;
+			.left-arrow, .right-arrow {
+				height: 50px;
+				width: 50px;
+			}
+			.left-arrow {
+				float: right;
+			}
+			.right-arrow {
+				float: left;
+			}
+		}
+	}
+	.owl-carousel {
+		margin-bottom: 30px;
+	}
+	.navbar.scrolled-nav {
+		border-bottom: none;
+		transition: .5s;
+	}
+	.navbar-brand {
+		display: none;
+	}
+	.navbar-header {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+	}
+	.menu {
+		ul {
+			width: 100vw;
+			background-color: #fff;
+			li {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+	#full-slider {
+		#cover {
+			.content {
+				h1 {
+					font-size: 25px;
+				}
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+		.left.carousel-control, .right.carousel-control {
+			display: none;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.desktop-popup.popup-message  {
+		display: none;
+	}
+	.desktop-control {
+		.btn-folder {
+			display: none;
+		}
+	}
+	.tablet-popup.popup-message  {
+		display: flex;
+	}
+	.tablet-control {
+		.btn-folder {
+				display: flex;
+				.left-arrow, .right-arrow {
+	    			height: 30px;
+    				width: 30px;
+				}
+			}
+		}
+		.owl-carousel {
+			margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 992px) {
+	.desktop-popup.popup-message  {
+		display: none;
+	}
+	.desktop-control {
+		.btn-folder {
+			display: none;
+		}
+	}
+	.tablet-popup.popup-message  {
+		display: flex;
+	}
+	.tablet-control {
+		.btn-folder {
+			display: flex;
+		}
+	}
+	.owl-carousel {
+		margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.desktop-popup.popup-message {
+		display: flex;
+	}
+	.desktop-control {
+		.btn-folder {
+			display: flex;
+		}
+	}
+	.tablet-popup.popup-message  {
+		display: none;
+	}
+	.tablet-control {
+		.btn-folder {
+			display: none;
+		}
+	}
+	.owl-carousel {
+		margin-bottom: 0;
+	}
+}
+

@@ -2,10 +2,8 @@ body {
   padding-top: 60px;
   ont-family: GothamPro; }
 
-a {
-  cursor: pointer; }
-  a:hover {
-    color: var(--secondary-menulink-color); }
+button {
+  padding: 0; }
 
 .popup {
   background-color: rgba(0, 0, 0, 0.5);
@@ -21,18 +19,26 @@ a {
   display: none; }
   .popup .popup-message {
     background-color: white;
-    padding: 100px;
+    padding: 10px;
+    height: 320px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column; }
+    .popup .popup-message p, .popup .popup-message button, .popup .popup-message input {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+    .popup .popup-message input {
+      height: 40px;
+      border: 1px solid #646464;
+      border-radius: 10px;
+      text-align: center; }
     .popup .popup-message p {
       color: #646464;
       font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 50px; }
+      font-weight: bold; }
     .popup .popup-message .corner-pop-up-btn {
       position: absolute;
       top: 0;
@@ -43,13 +49,15 @@ a {
       align-items: center;
       justify-content: center; }
       .popup .popup-message .corner-pop-up-btn span {
+        margin: 0;
+        padding: 0;
         cursor: pointer;
         color: #646464; }
 
 .pop-up-btn {
   height: 50px;
   border: 1px solid white;
-  border-radius: 50px;
+  border-radius: 20px;
   background-color: #646464;
   color: #ffffff;
   font-size: 16px;
@@ -57,31 +65,30 @@ a {
   line-height: 50px; }
 
 .navbar {
-  background-color: white; }
-  .navbar .navigation {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 100%;
-    display: flex;
-    align-items: center; }
-    .navbar .navigation .logo-text {
+  background-color: white;
+  height: 60px;
+  padding-top: 10px; }
+  .navbar img {
+    height: 40px; }
+  .navbar .navbar-header button {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .navbar .navbar-header .navbar-brand {
+    padding-top: 0; }
+  .navbar .navbar-header a {
+    color: #646464; }
+    .navbar .navbar-header a:hover {
+      color: #646464; }
+  .navbar .menu ul {
+    float: right; }
+    .navbar .menu ul li a {
       color: #646464;
-      font-size: 18px; }
-    .navbar .navigation .menu ul {
-      display: inline-block;
-      width: 100%;
-      text-align: right;
-      margin-bottom: 0; }
-      .navbar .navigation .menu ul li {
-        display: inline-block;
-        margin-left: 30px; }
-        .navbar .navigation .menu ul li a {
-          color: #646464;
-          text-decoration: none;
-          font-size: 14px;
-          padding: 0; }
-          .navbar .navigation .menu ul li a:hover {
-            color: #545ad8; }
+      font-size: 14px; }
+      .navbar .menu ul li a:hover {
+        background: transparent;
+        color: #545ad8; }
 
 .scrolled-nav {
   border-bottom: 5px solid #646464;
@@ -89,7 +96,8 @@ a {
 
 #full-slider {
   position: relative;
-  width: 100vw; }
+  width: 100vw;
+  height: auto; }
   #full-slider #cover {
     position: absolute;
     left: 0;
@@ -101,7 +109,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       flex-direction: column; }
       #full-slider #cover .content h1, #full-slider #cover .content p, #full-slider #cover .content button {
         z-index: 3;
@@ -177,6 +185,12 @@ a {
 
 .mini-slider {
   display: flex; }
+  .mini-slider .mini-item {
+    margin: 0; }
+    .mini-slider .mini-item img {
+      width: 100%; }
+  .mini-slider .tablet-control {
+    padding-top: 50px; }
   .mini-slider .btn-folder {
     display: flex;
     align-items: center;
@@ -214,5 +228,101 @@ a {
   to {
     left: 30%;
     width: 40%; } }
+@media (max-width: 768px) {
+  .desktop-popup.popup-message {
+    display: none; }
+
+  .desktop-control .btn-folder {
+    display: none; }
+
+  .tablet-popup.popup-message {
+    display: flex; }
+
+  .tablet-control .btn-folder {
+    display: flex; }
+    .tablet-control .btn-folder .left-arrow, .tablet-control .btn-folder .right-arrow {
+      height: 50px;
+      width: 50px; }
+    .tablet-control .btn-folder .left-arrow {
+      float: right; }
+    .tablet-control .btn-folder .right-arrow {
+      float: left; }
+
+  .owl-carousel {
+    margin-bottom: 30px; }
+
+  .navbar.scrolled-nav {
+    border-bottom: none;
+    transition: .5s; }
+
+  .navbar-brand {
+    display: none; }
+
+  .navbar-header {
+    width: 100vw;
+    display: flex;
+    justify-content: center; }
+
+  .menu ul {
+    width: 100vw;
+    background-color: #fff; }
+    .menu ul li {
+      display: block;
+      text-align: center; }
+
+  #full-slider #cover .content h1 {
+    font-size: 25px; }
+  #full-slider #cover .content p {
+    font-size: 12px; }
+  #full-slider .left.carousel-control, #full-slider .right.carousel-control {
+    display: none; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .desktop-popup.popup-message {
+    display: none; }
+
+  .desktop-control .btn-folder {
+    display: none; }
+
+  .tablet-popup.popup-message {
+    display: flex; }
+
+  .tablet-control .btn-folder {
+    display: flex; }
+    .tablet-control .btn-folder .left-arrow, .tablet-control .btn-folder .right-arrow {
+      height: 30px;
+      width: 30px; }
+
+  .owl-carousel {
+    margin-bottom: 30px; } }
+@media (min-width: 992px) {
+  .desktop-popup.popup-message {
+    display: none; }
+
+  .desktop-control .btn-folder {
+    display: none; }
+
+  .tablet-popup.popup-message {
+    display: flex; }
+
+  .tablet-control .btn-folder {
+    display: flex; }
+
+  .owl-carousel {
+    margin-bottom: 30px; } }
+@media (min-width: 1200px) {
+  .desktop-popup.popup-message {
+    display: flex; }
+
+  .desktop-control .btn-folder {
+    display: flex; }
+
+  .tablet-popup.popup-message {
+    display: none; }
+
+  .tablet-control .btn-folder {
+    display: none; }
+
+  .owl-carousel {
+    margin-bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */

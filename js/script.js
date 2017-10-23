@@ -3,9 +3,7 @@ $(document).ready(function () {
   $(".menu-link").click(function () {
       var menuElement = $(this).attr("href");
       var destination  = $(menuElement).offset().top;
-	$('body,html,document').animate({scrollTop: destination}, 1500, function(){
-      $('body,html,document').animate({scrollTop: destination - 70}, 1000);
-    });
+	$('body,html,document').animate({scrollTop: destination - 60}, 1500);
     return false;
   });
   $(window).scroll(function() {
@@ -20,17 +18,25 @@ $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
         loop:true,
         items: 3,
+        responsive:{
+          0:{
+              items:1
+          },
+          768: {
+              items: 3
+          }
+         },
         nav: true,
-	      navText: ['','']
+        navText: ['','']
     })
-  $('.mini-item').parent('div').addClass('col-md-4');
+  $('.mini-item').parent('div').addClass('col-md-4 col-sm-12 col-xs-12');
 //================================================================================mini carousel control
-  $('#mini-left-arrow').click(function(){
+  $('#mini-left-arrow, #mini-left-arrow-tablet').click(function(){
     console.log('click');
     $('.owl-prev').click();
     return false;
   });
-  $('#mini-right-arrow').click(function(){
+  $('#mini-right-arrow, #mini-right-arrow-tablet').click(function(){
     console.log('click');
     $('.owl-next').trigger('click');
     return false;
@@ -45,5 +51,28 @@ $(document).ready(function () {
     $("body").css("overflow","auto"); 
     $('.popup').fadeOut();
   })
+
+  $('#submit').click(function() {
+    var  name = $('input[name=name]').val();
+    var  email = $('input[name=email]').val();
+    var dataObj = {
+      name: name,
+      email: email
+    };
+    $.ajax({
+        url: "./php/save_data.php",
+        type: "POST",
+        data: dataObj,
+    });
+    return false;
+  });
+
+
+    // $("#myCarousel").swiperight(function() {
+    //     $(this).carousel('prev');
+    // });
+    // $("#myCarousel").swipeleft(function() {
+    //     $(this).carousel('next');
+    // });
 });
 

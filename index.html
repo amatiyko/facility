@@ -18,33 +18,44 @@
 <body>
 
   <div class="popup">
-    <div class="popup-message col-md-4">
-      <p>This is pop up</p>
-      <button class="pop-up-btn close-pop col-md-10">CLOSE</button>
-      <div class="corner-pop-up-btn close-pop"><span>X<span></div>
+    <div class="container">
+      <div class="row"> 
+        <div class="popup-message desktop-popup col-lg-6 col-md-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <p>This is pop up</p>
+          <button class="pop-up-btn close-pop col-lg-4 col-md-4 col-sm-5">CLOSE</button>
+          <div class="corner-pop-up-btn close-pop"><span>X<span></div>
+        </div>
+        <div class="popup-message tablet-popup col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <p>This is pop up</p>
+            <input type="text" name="name" placeholder="Your name" class="col-sm-8">
+            <input type="mail" name="email" placeholder="Your email" class="col-sm-8">
+            <button class="pop-up-btn close-pop col-lg-4 col-md-4 col-sm-5" id="submit">SUBMIT</button>
+          <div class="corner-pop-up-btn close-pop"><span>X<span></div>
+        </div>
+      </div>
     </div>
   </div>
+
+
   <nav class="navbar navbar-fixed-top">
-    <div class="container">
-      <div class="row navigation">
-        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 logo-img">
-            <img src="img/logo.svg" alt="FACILITY TEST">
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 logo-text">FACILITY TEST
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 menu nav">
-          <ul class="right">
-              <li><a class="menu-link" href ="#full-slider">FULL SLIDER</a></li>
-              <li><a class="menu-link" href ="#mini-slider">MINI SLIDER</a></li>
-              <li><a class="menu-link" href ="#columns">COLUMNS</a></li>
-              <li><a class="menu-link" href ="#article">ARTICLE</a></li>
-              <li><a class="menu-link" href ="#map">MAP</a></li>
-          </ul>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <img src="img/logo.svg" alt="FACILITY TEST"/>
+        </button>
+        <a class="navbar-brand"><span><img src="img/logo.svg" alt="FACILITY TEST"/>  </span>FACILITY TEST</a>
       </div>
+      <div class="collapse navbar-collapse menu" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="menu-link" href ="#full-slider">FULL SLIDER</a></li>
+          <li><a class="menu-link" href ="#mini-slider">MINI SLIDER</a></li>
+          <li><a class="menu-link" href ="#columns">COLUMNS</a></li>
+          <li><a class="menu-link" href ="#article">ARTICLE</a></li>
+          <li><a class="menu-link" href ="#map">MAP</a></li>
+        </ul>
       </div>
     </div>
   </nav>
-
 
   <div id="full-slider">
     <div id="cover">
@@ -100,76 +111,103 @@
     </div>
   </div>
 
+
   <div class="container section" id="mini-slider">
     <div class="row">
-        <div class="section-header">
-          <h2><span>MINI SLIDER</span></h2>
-        </div>
+      <div class="section-header">
+        <h2><span>MINI SLIDER</span></h2>
+      </div>
     </div>
-    <div class="row mini-slider">
-        <div class="col-md-1 col-sm-1 btn-folder">
-            <div class="left-arrow" id="mini-left-arrow">
-                <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
-                  <g>
-                    <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
-                  </g>
-                </svg>
-            </div>
+    <div class="row mini-slider desktop-control">
+
+      <div class="col-lg-1 btn-folder">
+        <div class="left-arrow" id="mini-left-arrow">
+          <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+            <g>
+              <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+            </g>
+          </svg>
         </div>
-        <div class="col-md-10 col-sm-10 owl-carousel owl-theme">
-            <div class="mini-item" ><img src = "img/slider.jpg"  /></div>
-            <div class="mini-item" ><img src = "img/slider2.jpg" /></div>
-            <div class="mini-item" ><img src = "img/slider3.jpg" /></div>
+      </div>
+
+      <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 owl-carousel owl-theme">
+          <div class="mini-item" ><img src = "img/slider.jpg"  /></div>
+          <div class="mini-item" ><img src = "img/slider2.jpg" /></div>
+          <div class="mini-item" ><img src = "img/slider3.jpg" /></div>
+      </div>
+
+      <div class="col-lg-1 btn-folder">
+        <div class="right-arrow" id="mini-right-arrow" >
+          <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+            <g>
+              <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+            </g>
+          </svg>
         </div>
-        <div class="col-md-1 col-sm-1 btn-folder">
-            <div class="right-arrow" id="mini-right-arrow" >
-                <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
-                  <g>
-                    <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
-                  </g>
-                </svg>
-            </div>
-        </div>
+      </div>
+    
     </div>
+
+    <div class="row mini-slider tablet-control">
+
+      <div class="col-md-1 col-md-offset-5 col-sm-1 col-sm-offset-5 col-xs-4 col-xs-offset-2 btn-folder">
+        <div class="left-arrow" id="mini-left-arrow-tablet">
+          <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+            <g>
+              <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+       <div class="col-md-1 col-sm-1 col-xs-4 btn-folder">
+        <div class="right-arrow" id="mini-right-arrow-tablet" >
+          <svg height="15" width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+            <g>
+              <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill="black"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+
+    </div>
+
   </div>
-
-
-
 
   <div class="container section" id="columns">
     <div class="row">
         <div class="section-header">
           <h2><span>COLUMN</span></h2>
         </div>
-        <div class="col-md-10 col-md-offset-1">
+        <div class=" col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat
                 velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat
                 velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat
                 velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem.</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat
                 velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat velit.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
               <h3>Title lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur harum id placeat
                 velit. Commodi distinctio doloribus dolorum eveniet iure modi obcaecati optio perferendis sed voluptatem. Aut, consectetur, ullam? Saepe.</p>
@@ -186,14 +224,14 @@
         </div>
     </div>
     <div class="row">
-          <div class="article-container col-md-8 col-md-offset-2">
+          <div class="article-container col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
             <h3>TITLE H3</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore ea eaque explicabo natus nihil porro ullam. <br/>Aliquid debitis deserunt dolore ducimus earum eligendi et ex exercitationem expedita facilis fugit illo laborum
             nesciunt odio officia omnis perferendis possimus quod recusandae, repudiandae, sequi similique velit. <b>Amet aspernatur</b> dolorem esse, exercitationem explicabo, harum ipsum laborum laudantium minus modi nisi repellendus tempora voluptate? Ab placeat, reprehenderit! Ab aliquid aspernatur, consequatur deserunt distinctio doloribus eos, explicabo illo, <a>molestiae mollitia natus nobis</a> perspiciatis quaerat quo sint tempore ullam vitae.</p>
           </div>
     </div>
       <div class="row">
-          <div class="article-container col-md-8 col-md-offset-2">
+          <div class="article-container col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
             <h3>TITLE H3</h3>
             <p>Aliquam asperiores, <i>blanditiis earum ipsam maxime</i> nobis odio optio recusandae repellendus reprehenderit rerum saepe sapiente similique, totam voluptas! Autem dolores omnis quas sed! Aut beatae consequatur <span>dicta est illum incidunt</span> obcaecati officiis placeat, quidem, sapiente ullam voluptatum. Id, impedit nesciunt?<br/>Atque cum cumque, dolores ducimus ea et expedita id illo incidunt, iusto nam non nostrum omnis perspiciatis quisquam repellat reprehenderit saepe sequi sint tempore ullam velit.</p>
           </div>
