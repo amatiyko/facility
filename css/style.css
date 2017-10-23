@@ -264,6 +264,7 @@ button {
     justify-content: center; }
 
   .menu ul {
+    margin-top: -5px;
     width: 100vw;
     background-color: #fff; }
     .menu ul li {
