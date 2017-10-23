@@ -281,6 +281,7 @@ button {
     #full-slider #cover .content h1 {
       font-size: 25px; }
     #full-slider #cover .content p {
+      width: 90%;
       font-size: 12px; }
     #full-slider .left.carousel-control, #full-slider .right.carousel-control {
       display: none; } }
