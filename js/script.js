@@ -75,14 +75,14 @@ $(document).ready(function () {
 
 
         // show menu on swipe to right
-        $('body,html,document').on('swiperight', function(e) {
+        $('#columns').on('swiperight', function(e) {
             e.preventDefault();
             $('#menu').animate({
                 left: '0'
             });
         });
         // hide menu on swipe to left
-        $('body,html,document').on('swipeleft',function(e){
+        $('#columns').on('swipeleft',function(e){
             e.preventDefault();
             $('#menu').animate({
                 left: '-100%'
