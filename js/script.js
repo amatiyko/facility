@@ -79,13 +79,13 @@ $(document).ready(function () {
     return false;
   });
 
-    $('#columns').on('swipedown', function(e) {
+    $('#columns').on('swipeleft', function(e) {
         e.preventDefault();
         $('.mobile-menu').animate({
             top: '0'
         }, 750);
     });
-    $('#columns').on('swipeup',function(e){
+    $('#columns').on('swiperight',function(e){
         e.preventDefault();
         $('.mobile-menu').animate({
             top: '-100%'
