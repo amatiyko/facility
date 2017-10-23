@@ -4,6 +4,8 @@ $(document).ready(function () {
       var menuElement = $(this).attr("href");
       var destination  = $(menuElement).offset().top;
 	$('body,html,document').animate({scrollTop: destination - 60}, 1500);
+	$('.navbar-toggle').toggleClass('collapsed');
+	$('.menu').toggleClass('in');
     return false;
   });
   $(window).scroll(function() {

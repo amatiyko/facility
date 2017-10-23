@@ -20,13 +20,13 @@ body {
 	ont-family: GothamPro;
 }
 
-//a {
-//    cursor: pointer;
-//
-//    &:hover {
-//    	color: var(--secondary-menulink-color);
-//	}
-//}
+a {
+    cursor: pointer;
+	color: $main-text-color;
+    &:hover {
+    	color: $secondary-menulink-color;
+	}
+}
 button {
 	padding: 0;
 }
@@ -145,6 +145,9 @@ button {
 						background: transparent;
 						color: $secondary-menulink-color;
 					}
+					&:active {
+						background: transparent;
+					}
 				}
 			}
 
@@ -162,8 +165,12 @@ button {
 
 #full-slider {
 	position: relative;
-	width: 100vw;
+	width: 100%;
 	height: auto;
+
+	img {
+		width: 100%;
+	}
 
 	#cover {
 		position: absolute;
@@ -171,9 +178,13 @@ button {
 		top: 0;
 		color: $secondary-text-color;
 		height: 100%;
+		width: 100%;
 
 		.content {
 			height: 100%;
+
+			z-index: 2;
+			border: 1px solid red;
 
 			@include flex;
 			@include flex-column;
@@ -407,15 +418,22 @@ button {
 		width: 100vw;
 		display: flex;
 		justify-content: center;
+		button {
+			float: none;
+			padding: 0;
+		}
 	}
 	.menu {
 		ul {
-			margin-top: -5px;
+			margin-top: -2px;
 			width: 100vw;
 			background-color: #fff;
 			li {
 				display: block;
 				text-align: center;
+				 a {
+					 padding-right: 0;
+				 }
 			}
 		}
 	}

@@ -2,6 +2,12 @@ body {
   padding-top: 60px;
   ont-family: GothamPro; }
 
+a {
+  cursor: pointer;
+  color: #646464; }
+  a:hover {
+    color: #545ad8; }
+
 button {
   padding: 0; }
 
@@ -89,6 +95,8 @@ button {
       .navbar .menu ul li a:hover {
         background: transparent;
         color: #545ad8; }
+      .navbar .menu ul li a:active {
+        background: transparent; }
 
 .scrolled-nav {
   border-bottom: 5px solid #646464;
@@ -96,16 +104,21 @@ button {
 
 #full-slider {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: auto; }
+  #full-slider img {
+    width: 100%; }
   #full-slider #cover {
     position: absolute;
     left: 0;
     top: 0;
     color: #ffffff;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     #full-slider #cover .content {
       height: 100%;
+      z-index: 2;
+      border: 1px solid red;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -263,14 +276,19 @@ button {
     width: 100vw;
     display: flex;
     justify-content: center; }
+    .navbar-header button {
+      float: none;
+      padding: 0; }
 
   .menu ul {
-    margin-top: -5px;
+    margin-top: -2px;
     width: 100vw;
     background-color: #fff; }
     .menu ul li {
       display: block;
       text-align: center; }
+      .menu ul li a {
+        padding-right: 0; }
 
   #full-slider {
     height: 90vh; }
