@@ -182,10 +182,7 @@ button {
 
 		.content {
 			height: 100%;
-
-			z-index: 2;
-			border: 1px solid red;
-
+			
 			@include flex;
 			@include flex-column;
 		
