@@ -271,12 +271,14 @@ button {
       display: block;
       text-align: center; }
 
-  #full-slider #cover .content h1 {
-    font-size: 25px; }
-  #full-slider #cover .content p {
-    font-size: 12px; }
-  #full-slider .left.carousel-control, #full-slider .right.carousel-control {
-    display: none; } }
+  #full-slider {
+    height: 90vh; }
+    #full-slider #cover .content h1 {
+      font-size: 25px; }
+    #full-slider #cover .content p {
+      font-size: 12px; }
+    #full-slider .left.carousel-control, #full-slider .right.carousel-control {
+      display: none; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .desktop-popup.popup-message {
     display: none; }
