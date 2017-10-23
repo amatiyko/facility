@@ -108,8 +108,8 @@ button {
 .mobile-menu {
 	display: block;
 	position: fixed;
-	top: -100%;
-	left: 0;
+	top: 0;
+	left: -100%;
 	width: 100vw;
 	background-color: $secondary-text-color;
 	padding-top: 10px;
@@ -514,6 +514,9 @@ button {
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
+	.navbar {
+		display: block;
+	}
 	.desktop-popup.popup-message  {
 		display: none;
 	}
@@ -540,6 +543,9 @@ button {
 }
 
 @media (min-width: 992px) {
+	.navbar {
+		display: block;
+	}
 	.desktop-popup.popup-message  {
 		display: none;
 	}

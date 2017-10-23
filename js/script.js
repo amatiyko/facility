@@ -79,16 +79,16 @@ $(document).ready(function () {
     return false;
   });
 
-    $(document).on('swipedown', function(e) {
+    $(document).on('swiperight', function(e) {
         e.preventDefault();
         $('.mobile-menu').animate({
-            top: '0'
+            left: '0'
         }, 750);
     });
-    $(document).on('swipeup',function(e){
+    $(document).on('swipeleft',function(e){
         e.preventDefault();
         $('.mobile-menu').animate({
-            top: '-100%'
+            left: '-100%'
         }, 750);
     });
 });
