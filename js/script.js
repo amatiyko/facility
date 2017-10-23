@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 
 
-    if($(window).width() <= 1000){
+
         // show menu on swipe to right
         $(document).on('swiperight', function(e) {
             e.preventDefault();
@@ -88,6 +88,5 @@ $(document).ready(function () {
                 left: '-100%'
             });
         });
-    }
 });
 
