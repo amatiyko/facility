@@ -79,7 +79,7 @@ $(document).ready(function () {
     return false;
   });
 
-    $(document).on('swipedown', function(e) {
+    $('#columns').on('swipedown', function(e) {
         e.preventDefault();
         $('.mobile-menu').animate({
             top: '0'
