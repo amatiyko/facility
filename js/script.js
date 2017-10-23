@@ -1,11 +1,21 @@
 $(document).ready(function () {
 //================================================================================scroll settings
   $(".menu-link").click(function () {
-      var menuElement = $(this).attr("href");
-      var destination  = $(menuElement).offset().top;
-	$('body,html,document').animate({scrollTop: destination - 60}, 1500);
+    var menuElement = $(this).attr("href");
+    var destination  = $(menuElement).offset().top;
+
+    if ($('window').width() < 768) {
+        $('body,html,document').animate({scrollTop: destination}, 1500);
+        $('.mobile-menu').animate({
+            top: '-100%'
+        }, 750);
+    } else {
+        $('body,html,document').animate({scrollTop: destination - 60}, 1500);
+    }
+
 	$('.navbar-toggle').toggleClass('collapsed');
 	$('.menu').toggleClass('in');
+
     return false;
   });
   $(window).scroll(function() {
@@ -69,24 +79,17 @@ $(document).ready(function () {
     return false;
   });
 
-
-
-
-
-
-        // show menu on swipe to right
-        $('#columns').on('swiperight', function(e) {
-            e.preventDefault();
-            $('#menu').animate({
-                left: '0'
-            });
-        });
-        // hide menu on swipe to left
-        $('#columns').on('swipeleft',function(e){
-            e.preventDefault();
-            $('#menu').animate({
-                left: '-100%'
-            });
-        });
+    $(document).on('swipedown', function(e) {
+        e.preventDefault();
+        $('.mobile-menu').animate({
+            top: '0'
+        }, 750);
+    });
+    $('#columns').on('swipeup',function(e){
+        e.preventDefault();
+        $('.mobile-menu').animate({
+            top: '-100%'
+        }, 750);
+    });
 });
 

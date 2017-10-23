@@ -103,6 +103,51 @@ button {
     line-height: 50px;
 }
 
+// =============   MOBILE MENU   ===============
+// =============================================
+.mobile-menu {
+	display: none;
+	position: fixed;
+	top: -100%;
+	width: 100vw;
+	background-color: $secondary-text-color;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	z-index: 8000;
+
+	.logo {
+		@include flex;
+
+		img{
+			height: 40px;
+		}
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+		li{
+			text-align: center;
+			padding-top: 5px;
+			padding-bottom: 5px;
+
+			a {
+				text-decoration: none;
+				color: $main-text-color;
+				font-size: 14px;
+				text-align: center;
+				padding-top: 5px;
+				padding-bottom: 5px;
+
+				&:hover {
+					color: $secondary-menulink-color;
+				}
+			}
+		}
+
+	}
+}
+
+
 // =============   NAVIGATION   ================
 // =============================================
                    
@@ -374,6 +419,15 @@ button {
 
 
 @media (max-width: 768px) {
+	//.mobile-menu {
+	//	display: block;
+	//}
+	.navbar {
+		display: none;
+	}
+	body {
+		padding: 0;
+	}
 	.desktop-popup.popup-message  {
 		display: none;
 	}
