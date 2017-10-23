@@ -78,6 +78,7 @@ $(document).ready(function () {
     });
     return false;
   });
+//================================================================================menu swipe
 
     $(document).on('swiperight', function(e) {
         e.preventDefault();
@@ -91,5 +92,10 @@ $(document).ready(function () {
             left: '-100%'
         }, 750);
     });
+    $('.mobile-menu-close').click(function () {
+        $('.mobile-menu').animate({
+            left: '-100%'
+        }, 750);
+    })
 });
 

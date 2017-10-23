@@ -109,7 +109,7 @@ button {
 	display: block;
 	position: fixed;
 	top: 0;
-	left: -100%;
+	left: 0;
 	width: 100vw;
 	background-color: $secondary-text-color;
 	padding-top: 10px;
@@ -145,6 +145,22 @@ button {
 			}
 		}
 
+	}
+	.mobile-menu-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+
+		@include flex;
+
+		span {
+			color: black;
+			font-size: 24px;
+			font-weight: 300;
+		}
 	}
 }
 
@@ -420,9 +436,6 @@ button {
 
 
 @media (max-width: 768px) {
-	//.mobile-menu {
-	//	display: block;
-	//}
 	.navbar {
 		display: none;
 	}
@@ -514,6 +527,9 @@ button {
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
+	.mobile-menu {
+		display: none;
+	}
 	.navbar {
 		display: block;
 	}
@@ -543,6 +559,9 @@ button {
 }
 
 @media (min-width: 992px) {
+	.mobile-menu {
+		display: none;
+	}
 	.navbar {
 		display: block;
 	}

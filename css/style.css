@@ -74,7 +74,7 @@ button {
   display: block;
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100vw;
   background-color: #ffffff;
   padding-top: 10px;
@@ -102,6 +102,20 @@ button {
         padding-bottom: 5px; }
         .mobile-menu ul li a:hover {
           color: #545ad8; }
+  .mobile-menu .mobile-menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .mobile-menu .mobile-menu-close span {
+      color: black;
+      font-size: 24px;
+      font-weight: 300; }
 
 .navbar {
   background-color: white;
@@ -341,6 +355,9 @@ button {
     #full-slider .left.carousel-control, #full-slider .right.carousel-control {
       display: none; } }
 @media (min-width: 768px) and (max-width: 991px) {
+  .mobile-menu {
+    display: none; }
+
   .navbar {
     display: block; }
 
@@ -362,6 +379,9 @@ button {
   .owl-carousel {
     margin-bottom: 30px; } }
 @media (min-width: 992px) {
+  .mobile-menu {
+    display: none; }
+
   .navbar {
     display: block; }
 
