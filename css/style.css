@@ -1,6 +1,7 @@
 body {
   padding-top: 60px;
-  font-family: GothamPro; }
+  font-family: GothamPro sans-serif;
+  overflow: hidden; }
 
 a {
   cursor: pointer;
