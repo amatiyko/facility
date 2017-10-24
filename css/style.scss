@@ -111,6 +111,7 @@ button {
 	top: 0;
 	left: -100%;
 	width: 100vw;
+	height: 100vh;
 	background-color: $secondary-text-color;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -130,6 +131,8 @@ button {
 			text-align: center;
 			padding-top: 5px;
 			padding-bottom: 5px;
+			margin-top: 5px;
+			margin-bottom: 5px;
 
 			a {
 				text-decoration: none;
