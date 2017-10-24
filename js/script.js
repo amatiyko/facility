@@ -7,11 +7,7 @@ $(document).ready(function () {
     if ($(window).width() < 768) {
         $('body,html,document').animate({scrollTop: destination}, 1500);
         $('.mobile-menu').animate({
-            top: '-100%'
-        }, 750);
-        $('.mobile-menu').animate({
-            left: '-100%',
-            top: '0',
+            left: '-100%'
         }, 750);
     } else {
         $('body,html,document').animate({scrollTop: destination - 60}, 1500);
