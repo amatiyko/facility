@@ -9,9 +9,15 @@ $(document).ready(function () {
         $('.mobile-menu').animate({
             top: '-100%'
         }, 750);
+        $('.mobile-menu').animate({
+            left: '-100%',
+            top: '0',
+        }, 750);
     } else {
         $('body,html,document').animate({scrollTop: destination - 60}, 1500);
     }
+
+
 
 	$('.navbar-toggle').toggleClass('collapsed');
 	$('.menu').toggleClass('in');
