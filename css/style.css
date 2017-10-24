@@ -1,6 +1,6 @@
 body {
   padding-top: 60px;
-  ont-family: GothamPro; }
+  font-family: GothamPro; }
 
 a {
   cursor: pointer;
@@ -241,6 +241,9 @@ button {
 #article {
   margin-bottom: 160px; }
 
+.ui-loader {
+  display: none; }
+
 .mini-slider {
   display: flex; }
   .mini-slider .mini-item {
@@ -354,7 +357,7 @@ button {
       font-size: 12px; }
     #full-slider .left.carousel-control, #full-slider .right.carousel-control {
       display: none; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
   .mobile-menu {
     display: none; }
 
@@ -378,27 +381,6 @@ button {
 
   .owl-carousel {
     margin-bottom: 30px; } }
-@media (min-width: 992px) {
-  .mobile-menu {
-    display: none; }
-
-  .navbar {
-    display: block; }
-
-  .desktop-popup.popup-message {
-    display: none; }
-
-  .desktop-control .btn-folder {
-    display: none; }
-
-  .tablet-popup.popup-message {
-    display: flex; }
-
-  .tablet-control .btn-folder {
-    display: flex; }
-
-  .owl-carousel {
-    margin-bottom: 30px; } }
 @media (min-width: 1200px) {
   .desktop-popup.popup-message {
     display: flex; }
@@ -414,13 +396,5 @@ button {
 
   .owl-carousel {
     margin-bottom: 0; } }
-#menu {
-  background-color: #E64A4A;
-  width: 80%;
-  height: 400px;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

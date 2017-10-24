@@ -17,7 +17,7 @@ $secondary-menulink-color: #545ad8;
 
 body {
 	padding-top: 60px;
-	ont-family: GothamPro;
+	font-family: GothamPro;
 }
 
 a {
@@ -354,6 +354,10 @@ button {
     margin-bottom: 160px;
 }
 
+.ui-loader {
+	display: none;
+}
+
 // =============   MINI SLIDER  ================
 // =============================================
 
@@ -526,7 +530,7 @@ button {
 		}
 	}
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
 	.mobile-menu {
 		display: none;
 	}
@@ -559,31 +563,31 @@ button {
 }
 
 @media (min-width: 992px) {
-	.mobile-menu {
-		display: none;
-	}
-	.navbar {
-		display: block;
-	}
-	.desktop-popup.popup-message  {
-		display: none;
-	}
-	.desktop-control {
-		.btn-folder {
-			display: none;
-		}
-	}
-	.tablet-popup.popup-message  {
-		display: flex;
-	}
-	.tablet-control {
-		.btn-folder {
-			display: flex;
-		}
-	}
-	.owl-carousel {
-		margin-bottom: 30px;
-	}
+	//.mobile-menu {
+	//	display: none;
+	//}
+	//.navbar {
+	//	display: block;
+	//}
+	//.desktop-popup.popup-message  {
+	//	display: none;
+	//}
+	//.desktop-control {
+	//	.btn-folder {
+	//		display: none;
+	//	}
+	//}
+	//.tablet-popup.popup-message  {
+	//	display: flex;
+	//}
+	//.tablet-control {
+	//	.btn-folder {
+	//		display: flex;
+	//	}
+	//}
+	//.owl-carousel {
+	//	margin-bottom: 30px;
+	//}
 }
 
 @media (min-width: 1200px) {
@@ -607,15 +611,3 @@ button {
 		margin-bottom: 0;
 	}
 }
-
-
-#menu {
-	background-color: #E64A4A;
-	width: 80%;
-	height: 400px;
-	position: fixed;
-	top: 0;
-	left: -100%;
-	color: #fff;
-}
-
