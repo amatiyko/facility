@@ -4,7 +4,7 @@ $(document).ready(function () {
     var menuElement = $(this).attr("href");
     var destination  = $(menuElement).offset().top;
 
-    if ($('window').width() < 768) {
+    if ($(window).width() < 768) {
         $('body,html,document').animate({scrollTop: destination}, 1500);
         $('.mobile-menu').animate({
             top: '-100%'
@@ -72,7 +72,7 @@ $(document).ready(function () {
       email: email
     };
     $.ajax({
-        url: "./php/save_data.php",
+        url: "php/save_data.php",
         type: "POST",
         data: dataObj,
     });

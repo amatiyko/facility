@@ -142,7 +142,7 @@ button {
       .navbar .menu ul li a:hover {
         background: transparent;
         color: #545ad8; }
-      .navbar .menu ul li a:active {
+      .navbar .menu ul li a:active, .navbar .menu ul li a:focus {
         background: transparent; }
 
 .scrolled-nav {
@@ -308,13 +308,10 @@ button {
 
   .tablet-control .btn-folder {
     display: flex; }
-    .tablet-control .btn-folder .left-arrow, .tablet-control .btn-folder .right-arrow {
-      height: 50px;
-      width: 50px; }
-    .tablet-control .btn-folder .left-arrow {
-      float: right; }
-    .tablet-control .btn-folder .right-arrow {
-      float: left; }
+  .tablet-control .btn-folder.left-folder {
+    justify-content: flex-end; }
+  .tablet-control .btn-folder.right-folder {
+    justify-content: flex-start; }
 
   .owl-carousel {
     margin-bottom: 30px; }
@@ -372,12 +369,6 @@ button {
 
   .tablet-popup.popup-message {
     display: flex; }
-
-  .tablet-control .btn-folder {
-    display: flex; }
-    .tablet-control .btn-folder .left-arrow, .tablet-control .btn-folder .right-arrow {
-      height: 30px;
-      width: 30px; }
 
   .owl-carousel {
     margin-bottom: 30px; } }
